@@ -13,6 +13,7 @@ protocol MenuProfileServiceDelegate: GenerecService{
 
 class MenuProfileService: MenuProfileServiceDelegate {
     
+    //MOCK
     func getMenuFromJson(completion: @escaping completion<MenuProfileGroup?>) {
         
         if let url = Bundle.main.url(forResource: "menuProfile", withExtension: "json"){
