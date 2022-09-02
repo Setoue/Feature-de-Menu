@@ -35,7 +35,7 @@ class MenuProfileService: MenuProfileServiceDelegate {
             }
         }
         
-    }
+    }//
     
     //Função que chama o MOCK pelo arquivo JSON
     func getMenuFromJson(completion: @escaping completion<MenuProfileGroup?>) {
