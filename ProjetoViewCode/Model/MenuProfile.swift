@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - MeuProfileGroup
-struct MeuProfileGroup: Codable {
+struct MenuProfileGroup: Codable {
     let group: [Menu]
 }
 
