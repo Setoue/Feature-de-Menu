@@ -8,5 +8,9 @@
 import UIKit
 
 class MenuProfileViewModel {
-
+    let service: MenuProfileService
+    
+    init(service: MenuProfileService){
+        self.service = service
+    }
 }
