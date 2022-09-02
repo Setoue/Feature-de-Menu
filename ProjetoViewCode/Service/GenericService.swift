@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol GenerecService: AnyObject {
     typealias completion <T> = (_ result: T, _ failure: Error?) -> Void
@@ -15,4 +16,5 @@ protocol GenerecService: AnyObject {
 enum Error: Swift.Error {
     case fileNotFound(name: String) //arquivo não encontrado
     case fileDecodingFailed(name: String, Swift.Error) //arquivo não serializado
+    case errorRequest(AFError)
 }

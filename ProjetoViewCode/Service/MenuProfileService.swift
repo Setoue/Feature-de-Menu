@@ -14,7 +14,30 @@ protocol MenuProfileServiceDelegate: GenerecService{
 
 class MenuProfileService: MenuProfileServiceDelegate {
     
-    //MOCK
+    //Função que faz a requisição na API
+    func getMenu(completion: @escaping completion<MenuProfileGroup?>){
+        
+        let url: String = "https://run.mocky.io/v3/42056070-3f15-46cc-803c-eea994c546bb"
+        
+        AF.request(url, method: .get).validate().responseDecodable(of: MenuProfileGroup.self) { response in
+            print(#function)
+            debugPrint(response)//mostra todo o conteudo do objeto
+            
+            switch response.result{
+            case .success(let success):
+                print("SUCCESS -> \(#function)")
+                completion(success, nil)
+                
+            case .failure(let error):
+                print("ERROR -> \(#function)")
+                completion(nil, Error.errorRequest(error))
+                
+            }
+        }
+        
+    }
+    
+    //Função que chama o MOCK pelo arquivo JSON
     func getMenuFromJson(completion: @escaping completion<MenuProfileGroup?>) {
         
         if let url = Bundle.main.url(forResource: "menuProfile", withExtension: "json"){

@@ -16,7 +16,7 @@ class MenuProfileViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .green
-        viewModel.fetch(typeFetch: .mock)
+        viewModel.fetch(typeFetch: .request)
     }
 }
 
