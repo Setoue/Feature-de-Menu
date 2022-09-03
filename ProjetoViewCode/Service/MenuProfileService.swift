@@ -10,6 +10,7 @@ import Alamofire
 
 protocol MenuProfileServiceDelegate: GenerecService{
     func getMenuFromJson(completion: @escaping completion<MenuProfileGroup?>)
+    func getMenu(completion: @escaping completion<MenuProfileGroup?>)
 }
 
 class MenuProfileService: MenuProfileServiceDelegate {
