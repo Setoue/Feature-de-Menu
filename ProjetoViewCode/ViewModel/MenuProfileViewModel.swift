@@ -39,7 +39,6 @@ class MenuProfileViewModel {
             }
         case .request:
             self.service.getMenu { success, error in
-//                print(success)
                 if let success = success {
                     self.delegate?.success()
                 } else {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1432BDA3848802D558452B66 /* Pods_ProjetoViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2CBC644BE14438A860E7E76 /* Pods_ProjetoViewCode.framework */; };
+		CE2153E728C6353D008E91E5 /* MenuProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2153E628C6353D008E91E5 /* MenuProfileScreen.swift */; };
+		CE2153EA28C66A8D008E91E5 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2153E928C66A8D008E91E5 /* SectionView.swift */; };
 		CEFE848428C11A3E00A7CCC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE848328C11A3E00A7CCC5 /* AppDelegate.swift */; };
 		CEFE848628C11A3E00A7CCC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE848528C11A3E00A7CCC5 /* SceneDelegate.swift */; };
 		CEFE848828C11A3E00A7CCC5 /* MenuProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE848728C11A3E00A7CCC5 /* MenuProfileViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		C2CBC644BE14438A860E7E76 /* Pods_ProjetoViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2153E628C6353D008E91E5 /* MenuProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileScreen.swift; sourceTree = "<group>"; };
+		CE2153E928C66A8D008E91E5 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		CEFE848028C11A3E00A7CCC5 /* ProjetoViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFE848328C11A3E00A7CCC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFE848528C11A3E00A7CCC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +60,31 @@
 				DFEBEFCE39E1E7FF652DA038 /* Pods-ProjetoViewCode.debug.xcconfig */,
 				D51A6A4FE84931B689FAF6C6 /* Pods-ProjetoViewCode.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE2153E428C634E5008E91E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE848728C11A3E00A7CCC5 /* MenuProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE2153E528C63518008E91E5 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE2153E628C6353D008E91E5 /* MenuProfileScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CE2153E828C66A75008E91E5 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				CE2153E928C66A8D008E91E5 /* SectionView.swift */,
+			);
+			path = Section;
 			sourceTree = "<group>";
 		};
 		CEFE847728C11A3E00A7CCC5 = {
@@ -81,13 +108,15 @@
 		CEFE848228C11A3E00A7CCC5 /* ProjetoViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				CE2153E828C66A75008E91E5 /* Section */,
+				CE2153E528C63518008E91E5 /* Screen */,
+				CE2153E428C634E5008E91E5 /* ViewController */,
 				CEFE84C628C133C600A7CCC5 /* Json */,
 				CEFE84C528C133BA00A7CCC5 /* ViewModel */,
 				CEFE84C428C133A500A7CCC5 /* Service */,
 				CEFE84C328C1339A00A7CCC5 /* Model */,
 				CEFE848328C11A3E00A7CCC5 /* AppDelegate.swift */,
 				CEFE848528C11A3E00A7CCC5 /* SceneDelegate.swift */,
-				CEFE848728C11A3E00A7CCC5 /* MenuProfileViewController.swift */,
 				CEFE848C28C11A4000A7CCC5 /* Assets.xcassets */,
 				CEFE848E28C11A4000A7CCC5 /* LaunchScreen.storyboard */,
 				CEFE849128C11A4000A7CCC5 /* Info.plist */,
@@ -251,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2153E728C6353D008E91E5 /* MenuProfileScreen.swift in Sources */,
 				CEFE848828C11A3E00A7CCC5 /* MenuProfileViewController.swift in Sources */,
+				CE2153EA28C66A8D008E91E5 /* SectionView.swift in Sources */,
 				CEFE848428C11A3E00A7CCC5 /* AppDelegate.swift in Sources */,
 				CEFE84D528C24AE600A7CCC5 /* GenericService.swift in Sources */,
 				CEFE84D128C1349F00A7CCC5 /* MenuProfileService.swift in Sources */,
