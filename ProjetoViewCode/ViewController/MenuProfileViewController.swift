@@ -44,12 +44,16 @@ extension MenuProfileViewController: MenuProfileViewModelDelegate {
     func error(message: String) {
         print("Deu ruim: \(message)")
     }
+    
+    @objc func tapSection(_ sender: UIButton) {
+        print(#function)
+    }
 }
 
 extension MenuProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 15
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,7 +61,12 @@ extension MenuProfileViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil
+        
+        let view = SectionView()
+        view.referenceButton.addTarget(self, action: #selector(self.tapSection(_:)), for: .touchUpInside)
+        view.referenceButton.tag = section
+        view.setupSection(description: "Teste")
+        return view
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
