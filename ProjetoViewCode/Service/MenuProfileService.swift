@@ -18,7 +18,7 @@ class MenuProfileService: MenuProfileServiceDelegate {
     //Função que faz a requisição na API
     func getMenu(completion: @escaping completion<MenuProfileGroup?>){
         
-        let url: String = "https://run.mocky.io/v3/42056070-3f15-46cc-803c-eea994c546bb"
+        let url: String = "https://run.mocky.io/v3/7521d745-2940-431d-8c22-e96cee80e267"
         
         AF.request(url, method: .get).validate().responseDecodable(of: MenuProfileGroup.self) { response in
             print(#function)

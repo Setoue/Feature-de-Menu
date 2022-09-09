@@ -38,12 +38,14 @@ class MenuProfileScreen: UIView {
         print(#function)
     }
     
+//    let identifierMenuProfileTableViewCell: MenuProfileTableViewCell = MenuProfileTableViewCell()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(), style: .grouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
-        //TO DO: Register
+        tableView.register(MenuProfileTableViewCell.self, forCellReuseIdentifier: MenuProfileTableViewCell.identifier)//utiliza uma cellClass pq não estamos trabalhando com arquivos .xib
         return tableView
     }()
     
@@ -90,4 +92,18 @@ class MenuProfileScreen: UIView {
         ])
     }
     
+    public func insertRowsTableView(indexPath: [IndexPath], section: Int){
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: indexPath, with: .fade)
+        self.tableView.reloadSections(IndexSet(integer: section), with: .none)
+        self.tableView.endUpdates()
+    }
+    
+    public func deleteRowsTableView(indexPath: [IndexPath], section: Int){
+        self.tableView.beginUpdates()
+        self.tableView.deleteRows(at: indexPath, with: .fade)
+        self.tableView.reloadSections(IndexSet(integer: section), with: .none)
+        self.tableView.endUpdates()
+    }
+
 }

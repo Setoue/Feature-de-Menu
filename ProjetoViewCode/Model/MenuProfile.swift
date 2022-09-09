@@ -9,16 +9,16 @@ import Foundation
 
 // MARK: - MeuProfileGroup
 struct MenuProfileGroup: Codable {
-    let group: [Menu]
+    let group: [Menu]?
 }
 
 // MARK: - Menu
 struct Menu: Codable {
-    let title: String
-    let child: [Item]
+    let title: String?
+    let child: [Item]?
 }
 
 // MARK: - Item
 struct Item: Codable {
-    let title: String
+    let title: String?
 }

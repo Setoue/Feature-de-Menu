@@ -38,6 +38,20 @@
             ]
         },
         {
+            "title":"Configurar aplicativo",
+            "child":[
+                {
+                    "title":"Busca Inteligente"
+                },
+                {
+                    "title":"Marcar vencimento no calendário"
+                },
+                {
+                    "title":"Configurar telefone"
+                }
+            ]
+        },
+        {
             "title":"Configurar cartão",
             "child":[
                 {

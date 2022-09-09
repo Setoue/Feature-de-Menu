@@ -10,6 +10,8 @@
 		1432BDA3848802D558452B66 /* Pods_ProjetoViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2CBC644BE14438A860E7E76 /* Pods_ProjetoViewCode.framework */; };
 		CE2153E728C6353D008E91E5 /* MenuProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2153E628C6353D008E91E5 /* MenuProfileScreen.swift */; };
 		CE2153EA28C66A8D008E91E5 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2153E928C66A8D008E91E5 /* SectionView.swift */; };
+		CE21540D28CBABCD008E91E5 /* MenuProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21540C28CBABCD008E91E5 /* MenuProfileTableViewCell.swift */; };
+		CE21541028CBAC65008E91E5 /* MenuProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21540F28CBAC65008E91E5 /* MenuProfileTableViewCellScreen.swift */; };
 		CEFE848428C11A3E00A7CCC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE848328C11A3E00A7CCC5 /* AppDelegate.swift */; };
 		CEFE848628C11A3E00A7CCC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE848528C11A3E00A7CCC5 /* SceneDelegate.swift */; };
 		CEFE848828C11A3E00A7CCC5 /* MenuProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE848728C11A3E00A7CCC5 /* MenuProfileViewController.swift */; };
@@ -26,6 +28,8 @@
 		C2CBC644BE14438A860E7E76 /* Pods_ProjetoViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2153E628C6353D008E91E5 /* MenuProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileScreen.swift; sourceTree = "<group>"; };
 		CE2153E928C66A8D008E91E5 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		CE21540C28CBABCD008E91E5 /* MenuProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCell.swift; sourceTree = "<group>"; };
+		CE21540F28CBAC65008E91E5 /* MenuProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
 		CEFE848028C11A3E00A7CCC5 /* ProjetoViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFE848328C11A3E00A7CCC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFE848528C11A3E00A7CCC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,23 @@
 			path = Section;
 			sourceTree = "<group>";
 		};
+		CE21540B28CBAB9E008E91E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE21540E28CBAC47008E91E5 /* Screen */,
+				CE21540C28CBABCD008E91E5 /* MenuProfileTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE21540E28CBAC47008E91E5 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE21540F28CBAC65008E91E5 /* MenuProfileTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		CEFE847728C11A3E00A7CCC5 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +129,7 @@
 		CEFE848228C11A3E00A7CCC5 /* ProjetoViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				CE21540B28CBAB9E008E91E5 /* Cell */,
 				CE2153E828C66A75008E91E5 /* Section */,
 				CE2153E528C63518008E91E5 /* Screen */,
 				CE2153E428C634E5008E91E5 /* ViewController */,
@@ -284,10 +306,12 @@
 				CEFE848828C11A3E00A7CCC5 /* MenuProfileViewController.swift in Sources */,
 				CE2153EA28C66A8D008E91E5 /* SectionView.swift in Sources */,
 				CEFE848428C11A3E00A7CCC5 /* AppDelegate.swift in Sources */,
+				CE21540D28CBABCD008E91E5 /* MenuProfileTableViewCell.swift in Sources */,
 				CEFE84D528C24AE600A7CCC5 /* GenericService.swift in Sources */,
 				CEFE84D128C1349F00A7CCC5 /* MenuProfileService.swift in Sources */,
 				CEFE84CD28C1343600A7CCC5 /* MenuProfile.swift in Sources */,
 				CEFE84CF28C1348300A7CCC5 /* MenuProfileViewModel.swift in Sources */,
+				CE21541028CBAC65008E91E5 /* MenuProfileTableViewCellScreen.swift in Sources */,
 				CEFE848628C11A3E00A7CCC5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

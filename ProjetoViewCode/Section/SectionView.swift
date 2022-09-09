@@ -83,4 +83,12 @@ class SectionView: UIView {
             
         ])
     }
+    
+    public func expandButton(value: Bool){
+        if value {
+            self.arrowImageView.image = UIImage(systemName: "chevron.compact.down")
+        } else {
+            self.arrowImageView.image = UIImage(systemName: "chevron.compact.up")
+        }
+    }
 }
