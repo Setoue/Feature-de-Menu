@@ -61,23 +61,23 @@ class MenuProfileViewModel {
         }
     }
     
-    public var numberOfSection: Int {
+    public var numberOfSection: Int { //retorna a quantidade de section existente
         return self.data.count
     }
     
-    public func titleForSection(section: Int) -> String {
+    public func titleForSection(section: Int) -> String { //retorna o titulo de cada section
         return self.data[section].title ?? ""
     }
     
-    public func titleCell(indexPath: IndexPath) -> String{
+    public func titleCell(indexPath: IndexPath) -> String{ //retorna do titulo de cada cell
         return self.data[indexPath.section].child?[indexPath.row].title ?? ""
     }
     
-    public func constainsSection(_ section: Int) -> Bool{
+    public func constainsSection(_ section: Int) -> Bool{ //manda a section fechar seu campo, caso ele esteja aberta
         return self.hiddenInSection.contains(section)
     }
     
-    public func tappedSection(type: TypeHiddenSection, section: Int){
+    public func tappedSection(type: TypeHiddenSection, section: Int){ //retorna se a section clicada ou não
         if type == .insert {
             self.hiddenInSection.insert(section)
         } else {
@@ -85,7 +85,7 @@ class MenuProfileViewModel {
         }
     }
     
-    public func indexPathForSection(section: Int) -> [IndexPath]{
+    public func indexPathForSection(section: Int) -> [IndexPath]{ //retorna um array de indexPath(a posição de cada section) para determinar o tamanho da section
         var indexPath = [IndexPath]()
         let size = self.childCount(section: section)
         for row in 0..<size{
@@ -94,11 +94,11 @@ class MenuProfileViewModel {
         return indexPath
     }
     
-    private func childCount(section: Int) -> Int{
+    private func childCount(section: Int) -> Int{ // retorna a quantidade de child(de cell) que tem dentro de uma section
         return self.data[section].child?.count ?? 0
     }
     
-    public func numberOfRowsInSection(section: Int) -> Int {
+    public func numberOfRowsInSection(section: Int) -> Int { //valida de a section está com o campo aberto ou fechado
         if self.constainsSection(section){
             return 0
         } else {
@@ -106,7 +106,7 @@ class MenuProfileViewModel {
         }
     }
     
-    private func hiddenAllSection(){
+    private func hiddenAllSection(){ //esconde as todas as section
         let size = self.numberOfSection
         for index in 0..<size {
             self.hiddenInSection.insert(index)
